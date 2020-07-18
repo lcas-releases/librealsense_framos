@@ -5,6 +5,8 @@
 #include "error.h"
 #include "../../../include/librealsense2-framos/rs.h"
 
+#include "../../../include/librealsense2-framos/hpp/rs_context.hpp"
+
 extern "C" JNIEXPORT jlong JNICALL
 Java_com_intel_realsense_librealsense_RsContext_nCreate(JNIEnv *env, jclass type) {
     rs2_error* e = NULL;

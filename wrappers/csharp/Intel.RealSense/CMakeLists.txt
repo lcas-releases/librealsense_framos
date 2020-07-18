@@ -8,10 +8,10 @@ add_library(${PROJECT_NAME}
     Context.cs
     NativeMethods.cs
     .nuget/Intel.RealSense.targets
-	GlobalSuppressions.cs
+    GlobalSuppressions.cs
     Properties/AssemblyInfo.cs
-	packages.config
-	stylecop.json
+    packages.config
+    stylecop.json
 )
 
 include(Base/CMakeLists.txt)
@@ -77,7 +77,7 @@ target_compile_options(${PROJECT_NAME} PRIVATE /define:${CMAKE_SYSTEM_NAME})
 set_source_files_properties(stylecop.json PROPERTIES VS_TOOL_OVERRIDE "AdditionalFiles")
 
 install(TARGETS ${PROJECT_NAME}
-    EXPORT realsense2Targets
+    EXPORT realsense2-framosTargets
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
     #LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     #ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
