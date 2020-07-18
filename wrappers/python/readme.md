@@ -1,9 +1,16 @@
 # Python Wrapper
 
 ## Table of Contents
+* [FRAMOS D400e cameras](#framos-d400e-cameras)
 * [Installation](#installation)
 * [Building from source](#building-from-source)
 * [Examples](#examples)
+
+## FRAMOS D400e cameras
+
+This Python wrapper for librealsense2 is modified to support FRAMOS D400e cameras. Please refer to the file **readme_d400e.md** for instructions on how to install and use the wrapper with D400e cameras.
+
+Information in this readme file (**readme.md**) does not apply to FRAMOS D400e cameras except the chapter [Examples](#examples).
 
 ## Installation
 
@@ -20,7 +27,7 @@ Package is available at https://pypi.python.org/pypi/pyrealsense2
 To install the package, run:
 > `pip install pyrealsense2`
 
-Windows users can install the RealSense SDK 2.0 from the release tab to get pre-compiled binaries of the wrapper, for both x86 and x64 architectures. (Note that these binaries are built with Python 2.7, and cannot be import using Python 3).
+Windows users can install the RealSense SDK 2.0 from the release tab to get pre-compiled binaries of the wrapper, for both x86 and x64 architectures. (Both Python 2.7 and Python 3 are supported).
 
 
 ## Building From Source
@@ -42,7 +49,7 @@ Windows users can install the RealSense SDK 2.0 from the release tab to get pre-
   * `sudo make install`
 4. update your PYTHONPATH environment variable to add the path to the pyrealsense library
   * `export PYTHONPATH=$PYTHONPATH:/usr/local/lib`
-5. Alternatively, copy the build output (`librealsense2.so` and `pyrealsense2.so`) next to your script.
+5. Alternatively, copy the build output (`librealsense2-framos.so` and `pyrealsense2.so`) next to your script.
   * **Note:** Python 3 module filenames may contain additional information, e.g. `pyrealsense2.cpython-35m-arm-linux-gnueabihf.so`)
 
 
@@ -55,7 +62,7 @@ For example: `-DPYTHON_EXECUTABLE=C:/Python27/python.exe`
 > The precompiled binaries shipped with [the installer](https://github.com/IntelRealSense/librealsense/releases) assume **Python 2.7**.
 >The error `ImportError: DLL load failed: The specified module could not be found` might indicate versions mismatch or architecture (x86 vs x64) mismatch.
 
-4. Open `librealsense2.sln` that was created in the previous step, and build the `pyrealsense2` project
+4. Open `librealsense2-framos.sln` that was created in the previous step, and build the `pyrealsense2` project
 5. Open the output folder of the project (e.g `build\x64-Release\Release\`) and copy `pyrealsense2.pyd` into your python's `site-packages` (e.g `C:\Python27\Lib\site-packages`)
 6. Alternatively, copy the build output (`realsense2.dll` and `pyrealsense2.pyd`) next to your script.
 
