@@ -139,7 +139,7 @@ namespace Intel.RealSense
 
         /// <summary>Impose Inter-camera HW synchronization mode. Applicable for D400/Rolling Shutter SKUs</summary>
         InterCamSyncMode = 42,
-
+        
         /// <summary>Select a stream to process</summary>
         StreamFilter = 43,
 
@@ -169,5 +169,21 @@ namespace Intel.RealSense
 
         /// <summary>APD temperature</summary>
         APDTemperature = 54,
+
+        /// <summary>Inter-packet delay for eth cameras</summary>
+        InterPacketDelay = 71,
+
+        /// <summary>Packet size for eth cameras</summary>
+        PacketSize = 72,
+        
+        /// <summary>Select external trigger type for eth cameras</summary>
+        ExtTriggerSource = 73,
+
+        /// <summary>Execute software trigger for eth cameras</summary>
+        SoftwareTrigger = 74,
+
+        /// <summary>Execute software trigger for eth cameras</summary>
+        SoftwareTriggerAllSensors = 75,
+
     }
 }
